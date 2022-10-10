@@ -10,7 +10,7 @@ export default class Component {
         // forgets to set it.
         this.render = this.render || function() {};
         
-        // If there's a store passed in, subscribe to the state change
+        //  subscribe to the state change if a store is passed in
         if(props.store instanceof Store) {
             props.store.events.subscribe('stateChange', () => self.render());
         }

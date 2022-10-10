@@ -4,8 +4,8 @@
 :root {
     --border: #888888;
     --decor: #777777;
-    --text: #141414;
-    --text-secondary: #555555;
+    --text: #c94242fb;
+    --text-secondary: #eeeeee;
     --danger: #d62c1a;
     --danger--dark: #a82315;
 }
@@ -15,8 +15,8 @@
 */
 html {
     height: 100%;
-    font-size: 16px;
-    background: #f3f3f3;
+    font-size: 13px;
+    background: #000000;
 }
 
 body {

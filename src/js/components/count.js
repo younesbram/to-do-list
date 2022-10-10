@@ -16,12 +16,12 @@ export default class Count extends Component {
      */
     render() {
         let suffix = store.state.items.length !== 1 ? 's' : '';
-        let emoji = store.state.items.length > 0 ? '🙌' : '😢';
+        let emoji = store.state.items.length > 0 ? ' 🏅 ' : ' 🥺 ';
 
         this.element.innerHTML = `
-            <small>You've done</small>
+            <small>You've</small>
             <span>${store.state.items.length}</span>
-            <small>thing${suffix} today ${emoji}</small>
+            <small>thing${suffix} to-do today ${emoji}</small>
         `;
     }
 }

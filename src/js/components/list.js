@@ -3,7 +3,6 @@ import store from '../store/index.js';
 
 export default class List extends Component {
     
-    // Pass our store instance and the HTML element up to the parent Component
     constructor() {
         super({
             store,
@@ -19,16 +18,16 @@ export default class List extends Component {
     render() {
         let self = this;
 
-        // If there are no items to show, render a little status instead
+        // If there are no items to show, render motivational message!
         if(store.state.items.length === 0) {
-            self.element.innerHTML = `<p class="no-items">You've done nothing yet 😢</p>`;
+            self.element.innerHTML = `<p class="no-items">🤔 Your list is empty! Go ahead and track your first to-do item with the input bar below.</p>`;
             return;
         }
         
         // Loop the items and generate a list of elements
         self.element.innerHTML = `
             <ul class="app__items">
-                ${store.state.items.map(item => {
+                ${store.state.items.sort().map(item => {
                     return `
                         <li>${item}<button aria-label="Delete this item">×</button></li>
                     `
